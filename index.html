@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Счётчик каллорий</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <h1>Счётчик калорий
+    </h1>
+    <div class="container">
+        <div class="sex">Пол</div>
+        <ul>
+            <li>
+                <a class="female">Женщина</a>
+                <input type="radio" name="gender" value="161" checked="checked">
+            </li>
+            <li>
+                <a class="male">Мужчина</a>
+                <input type="radio" name="gender" value="5" checked="checked">
+            </li>
+        </ul>
+
+        <div class="height">Рост (cм)</div>
+        <input maxlength="10" size="5" value="">
+        <form action="handler.php"></form>
+        <div class="weight">Вес(кг)</div>
+        <input maxlength="10" size="5" value="">
+        <div class="lifestyle">Образ жизни</div>
+        <ul>
+            <li class="lazy">Малоподвижный (без нагрузок)</li>
+            <input type="radio" name="lifeStyle" value="1,2">
+            <li class="radio">Умеренные нагрузки (3-5 дней/неделя)</li>
+            <input type="radio" name="lifeStyle" value="1,55">
+            <li class="active">Тяжелые нагрузки(6-7 дней/неделя)</li>
+            <input type="radio" name="lifeStyle" value="1,725">
+        </ul>
+
+        <button>Рассчитать</button>
+    </div>
+    <div class="daily_calorie_intake">Ваша суточная норма калорий</div>
+    <ul>
+        <li class="weight_loss">Для снижения веса</li>
+        <input maxlength="10" size="5" value="">
+        <li class="weight_retention">Для удержания веса</li>
+        <input maxlength="10" size="5" value="">
+        <li class="to_gain_weight">Для набора веса</li>
+        <input maxlength="10" size="5" value="">
+    </ul>
+    <!-- <ul>
+        <li class="first_level">1300</li>
+        <li class="second_level">1600</li>
+        <li class="third_level">2000</li>
+    </ul> -->
+
+    <div class="katalog"> Список продуктов</div>
+    <form>
+        <p><select name="food">
+            <option label="на 100 грамм продукта"></option> 
+         <optgroup label="Крупы">
+          <option value="r1">Гречневая</option>
+          <option value="r2">Рис</option>
+          <option value="r3">Овсяная</option>
+         </optgroup>
+         <optgroup label="Овощи">
+          <option value="u1">Картошка</option>
+          <option value="u2">Свекла</option>
+          <option value="u3">Огурец</option>
+         </optgroup>
+        </select></p>
+        <p><input type="submit" value="Добавить"></p>
+    </form>
+
+</body>
